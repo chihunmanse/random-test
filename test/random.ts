@@ -35,6 +35,9 @@ describe("Uniswap", () => {
 
       const random3 = await commitReveal.getNumber("hi");
       console.log(random3);
+
+      const random4 = await commitReveal.getNumber("123");
+      console.log(random4);
     });
   });
 });
