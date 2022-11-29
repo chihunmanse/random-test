@@ -22,7 +22,7 @@ describe("Uniswap", () => {
 
   describe("Random", () => {
     it("Random", async () => {
-      const setMaxTx = await commitReveal.setMax(1000);
+      const setMaxTx = await commitReveal.setMax(10000);
       await setMaxTx.wait();
 
       console.log(await commitReveal.max());
@@ -30,14 +30,11 @@ describe("Uniswap", () => {
       const random = await commitReveal.getNumber("hi");
       console.log(random);
 
-      const random2 = await commitReveal.getNumber("hi2");
-      console.log(random2);
+      const setMaxTx2 = await commitReveal.setMax(50);
+      await setMaxTx2.wait();
 
       const random3 = await commitReveal.getNumber("hi");
       console.log(random3);
-
-      const random4 = await commitReveal.getNumber("123");
-      console.log(random4);
     });
   });
 });
